@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            text-decoration:none;
+        }
+        .img{
+            image-rendering:crisp-edges;
+        }
+        body{
+            font-family:'Times New Roman', Times, serif ;
+            background-image: url(background01.jpg);
+            background-color: linear-gradient(to bottom,rgb(0,72,148),rgb(1,79,170));
+            image-rendering: crisp-edges;
+            background-repeat: no-repeat;
+            background-size:auto;
+        }
+
+        header {
+            background: linear-gradient(to bottom right, #ff7e5f, #feb47b, #6dd5ed, #ff758e);
+            color: rgb(245, 245,213);
+            padding: 30px;
+            text-align: center;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: blink;
+            margin-right: 15px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        /* 左侧导航栏样式 */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -40px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/* 导航栏中的链接样式 */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* 鼠标悬停在链接时的效果 */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* 关闭按钮样式 */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* 主内容区域样式 */
+#main {
+    transition: margin-left 0.5s;
+    padding: 10px;
+    
+}
+       
+.content {
+            margin-left: 200px;
+            padding: 20px;    
+
+        }
+        
+.content1 {
+            margin-top: 20px;
+            height:60rem;
+            width:78rem;
+            border-radius: 5px;
+            background-color:antiquewhite;
+}
+.aisi{
+    text-align: right;
+}
+
+.content2{
+            margin-top: 20px;
+            height:20rem;
+            width:78rem;
+            background-color:rgb(215, 250, 220);
+            border-radius: 5px;
+        }
+
+.content3{  border-radius: 5px;
+            margin-top: 20px;
+            height:18rem;
+            width:78rem;
+            background-color:rgb(32, 155, 161);
+        }
+
+.content4{  border-radius: 5px;
+            margin-top: 20px;
+            height:12rem;
+            width:78rem;
+            background-color:rgb(107, 156, 23);
+        }
+
+.content5{  border-radius: 5px;
+            margin-top: 20px;
+            height:20rem;
+            width:78rem;
+            background-color:rgb(158, 133, 18);
+        }
+
+.backTop{
+        position: fixed;
+        bottom: 250px;
+        right: 20px;
+        z-index: 999;
+        width: 35px;
+        height: 35px;
+        background-color: deepskyblue;
+        line-height: 35px;
+        text-align: center;
+        font-size: 14px;
+        color: white;
+        border-radius: 50%;
+        transition: all linear 0.5s;
+        cursor: pointer;
+
+        }
+
+        
+
+        .image_2{
+        background-image: url(/pic2.jpg);
+        background-position: 0 0;
+        background-attachment: fixed;
+        background-size: cover;
+        height:680px;
+        width:100%;
+
+        }
+
+        .image_3{
+        background-image: url(/pic3.jpg);
+        background-position: 0 0;
+        background-attachment: fixed;
+        background-size: cover;
+        height:680px;
+        width:100%;
+
+        }
+
+        .image_4{
+        background-image: url(/pic4.jpg);
+        background-position: 0 0;
+        background-attachment: fixed;
+        background-size: cover;
+        height:680px;
+        width:100%;
+
+        }
+
+        .word{
+        position:relative;
+        top:480px;
+        font-size: 55px;
+        color:white;
+        text-align: center;
+        font-weight: bolder;
+        }
+
+        .bg{
+        text-align: center;
+        font-size:46px;
+        font-weight: bolder;
+        height:220px;
+        line-height: 220px;
+        background-color: rgb(131, 134, 204);
+        color:white;
+
+        }
+
+</style>
+    </style>
+</head>
+<body>
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <center><a href="#">我的色彩</a></center>
+        <center><a href="#">我的自白</a></center>
+        <center><a href="#">我的期望</a></center>
+        <center><a href="#">感谢</a></center>
+        <center><a href="#">后朋克</a></center>
+    </div>
+    
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <h2></h2>
+        <p></p>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("sideNav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+            document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+    <!-- 这是边框内容 -->
+    <!-- 弹出的按钮需要两个标签来实现 -->
+    
+    <div class="sidebar">              
+    </div>
+    <!-- 这是正文内容，是网页里面的主要内容 -->
+    <div class="content">
+        <header>
+            <h1>万阳的前端小站</h1>
+            <h3>你好，欢迎来到我的前端小站，远道而来的旅人呀，欢迎回家！</h3>
+        </header>
+
+        <nav>
+            <a href="#">首页</a>
+            <a href="#">关于我</a>
+            <a href="#">文章列表</a>
+            <a href="#">联系我</a>
+        </nav>
+
+        <div class="content1">
+            
+            <h2>&emsp;&emsp;我们一定要过一段无怨无悔的人生，将来一定要出海，然后随心所欲的活着，比谁都要自由。</h2>
+            <h3 class="aisi">---ONE_PLACE&emsp;艾斯&emsp;&emsp;</h3>
+            <h2>&emsp;&emsp;我的色彩</h2>
+            <p>&emsp;&emsp;&emsp;你好，我是万阳，我来自山东日照，喜欢阅读、跑步和篮球，热爱探索新的事物，结交新的朋友。</p>
+            <p>&emsp;&emsp;&emsp;我渴望在生活的画卷中，看到不一样的色彩，接触不一样的风景</p>
+            <p>&emsp;&emsp;&emsp;在前端学习和实践的过程中，难免会有磕磕绊绊。幸运的是，在学习的过程中，我切实感受到了亲自动手实践和设计的乐趣。</p>
+            <center><img src="./pinksky.jpg" height ="60%" width="78%" ></center>
+            <center><p> <i>每一个人都是一个生命&emsp;&emsp;&emsp;&emsp;&emsp;人是银河星云中的一粒微尘<br>
+                每一粒微尘都有自己的能量&emsp;&emsp;&emsp;无数的微尘汇集成一片光明<br>
+                每一个人既是独立的&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;而又互相照耀<br>
+                在互相照耀中不停地运转&emsp;&emsp;&emsp;&emsp;和地球一同在太空中运转<br>
+                我们在运转中燃烧&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;我们的生命就是燃烧<br>
+                我们在自己的时代&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;应该象节日的焰火<br>
+                带着欢呼射向高空&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;然后迸发出璀璨的光<br>
+                即使我们是一支蜡烛&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;也应该“蜡炬成灰泪始干”<br>
+                即使我们只是一根火柴&emsp;&emsp;&emsp;&emsp;&emsp;也要在关键时刻有一次闪耀<br>
+                即使我们死后尸骨都腐烂了&emsp;&emsp;&emsp;也要变成磷火在荒野中燃烧</i></p></center>
+                <br><p>&emsp;&emsp;&emsp;亲爱的朋友们，希望我们相互扶持，汇集光芒，绽放理想的光彩</p>
+
+        </div>
+            
+        <div class="content2">
+            <h2>&emsp;&emsp;&emsp;我的自白</h2>
+            <br><h2>&emsp;&emsp;&emsp;“予我咖啡，以改变我能改变的事。”</h2>
+            <h2>&emsp;&emsp;&emsp;“再予我美酒，以接受那些我无能为力的事”</h2><br><br>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;也许是受成长的环境所限制，说句实在话，我没有特别突出的特长，没有特殊的爱好，也没有过人的能力与才华。</p>
+            <p>&emsp;&emsp;&emsp;但我感谢生活给予我的酸楚与苦痛，并因此得以正视那些凌乱和窘迫的时刻。</p>
+            <p>&emsp;&emsp;&emsp;&emsp;因此，我想，在我的生活中，时常给予我勇气，乐趣的来源，就是我渴望探索，那颗永无休止向前的心吧。</p>
+            <br>
+            <br>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;“Progress comes from small，steady actions.”这是电视剧中《洛奇》的主人公坚持练习拳击所时常重复的一句话</p>
+            <p>&emsp;&emsp;&emsp;有时候我会想，自己什么时候也能成为一流的高手，真正开拓自己的新天地呢？我羡慕目标明确而又毫不懈怠的洛奇，他是我永恒的偶像。</p>
+            <p>&emsp;&emsp;&emsp;我想走出生活的怪圈，以力量与汗水打开前方的道路。</p>
+        </div>
+
+        <div class="content3">
+            <h2>&emsp;&emsp;&emsp;我的期望</h2><br>
+            <h2>&emsp;&emsp;&emsp;任何命运，无论多么复杂漫长，实际上只反映于一个瞬间——那就是当人们真正彻底醒悟自己是谁的那一刻。</h2>
+            <br>
+            <br>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;有时，我会想，世上最快乐的事情，莫过于有一群志同道合的朋友们，在进步和热爱的道路上一同前行吧。</p>
+            <p>&emsp;&emsp;&emsp;因此，我希望借这个机会认识喜欢编程的同好们，结识才华横溢的大佬们，在拓宽视野和提升思维的过程中做自己满足的事情。</p>
+            <br>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;如果说功利一点的想法，那还是会有的。竞赛？项目？可是我觉得这些事情似乎距离我这个菜鸟为时尚远。</p>
+            <p>&emsp;&emsp;&emsp;如果太过功利，那么行为和动机都会不纯粹吧。</p>
+            <br>
+            <p>&emsp;&emsp;&emsp;总之，期望我们能在接下来的道路一同前行，不负理想。</p>
+            
+
+        </div>
+            
+        <div class="content4">
+            <h2>&emsp;&emsp;&emsp;感谢</h2>
+            <br>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在前端学习和动手操作的过程中，感谢为我提供无私帮助的朋友们，衷心感谢，您的指点让我从一无所知的小白成长为初窥门径的新手。</p>
+            <p>&emsp;&emsp;&emsp;感谢浩然学长，您坚定了我学前端的想法，指引我入门，并鼓励我一探究竟。</p>
+            <p>&emsp;&emsp;&emsp;多谢俊杰学长，您分享的工具非常实用，并指出了我的文件里的若干问题。</p>
+            <p>&emsp;&emsp;&emsp;最后感谢互联网上无私的技术内容分享者，这些技术上的指导让我受益匪浅。</p>
+            <br>
+            <p>&emsp;&emsp;&emsp;平常时间总是不够用，再加上能力不强，若有不足之处，敬请批评指正。</p>
+        </div>
+           
+            
+        <div class="content5">
+            <h2>&emsp;&emsp;&emsp;后朋克</h2>
+            <br>
+            <h3>&emsp;&emsp;&emsp;！！！大爱后朋！！！</h3>
+            <br>
+            <p>&emsp;&emsp;&emsp;如同浪潮般质感的合成器，叛逆直率的歌词，陪伴了我无数个无眠的夜晚和空白的梦境</p>
+            <p>&emsp;&emsp;&emsp;它让我重新振作起来，让我无惧冷眼，无问西东。</p>
+            <p>&emsp;&emsp;&emsp;“若火轮飞旋于沙丘之上，太阳向我滚来。”</p>
+            <br>
+            <p>&emsp;&emsp;&emsp;下面的这一首歌，是我最爱的后朋克歌曲，愿我们都能冲破生活的平凡，骄傲地叛逆和前进。</p>
+            <br>
+            <br>
+            
+
+            <audio controls="controls" loop="loop">
+                	
+                <source src="music.mp3" type="audio/mp3"></source>
+                
+                </audio>
+
+        </div>
+    </div>
+
+    
+
+<body>
+      <div class="">
+        <div class="word">
+            Bye bye, all of pasts.
+        </div>
+      </div>
+      <div class="bg">
+        The best hard are always the bravest.
+      </div>
+      <div class="image_2">
+        <div class="word">
+            All children, except one, grow up.
+        </div>
+      </div>
+      <div class="bg">
+        It's better to burn out than to fade away.
+      </div>
+      <div class="image_3">
+        <div class="word">
+            Fading is true while flowering is past.
+        </div>
+      </div>
+      <div class="bg">
+        There was no possibility of taking a walk.
+      </div>
+      <div class="image_4">
+        <div class="word">
+            All this happened, more or less.
+        </div>
+      </div>
+    <div class="backTop" id="backTop">Top</div>
+    <script>
+        const backTop = document.querySelector('#backTop');
+        window.addEventListener('scroll', function () {
+        const scrollTop = document.documentElement.scrollTop;
+        backTop.style.opacity = scrollTop >= 300 ? 1 : 0;
+        });
+        backTop.addEventListener('click', function () {
+        document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+</html>
